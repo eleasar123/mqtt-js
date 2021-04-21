@@ -34,7 +34,7 @@ client.on('message', function (topic, message) {
   // message is Buffer
   console.log(topic.toString())
   console.log(message.toString())
-  topicDiv.innerHTML+=topic.toString()+"<br>";
+  topicDiv.innerHTML+="<p>"+topic.toString()+"</p>";
   messageDiv.innerHTML+=message.toString()+"<br>";
   console.log(topic);
   //   client.end()

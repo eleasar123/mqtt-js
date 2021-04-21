@@ -1,0 +1,97 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQTT</title>
+
+    <!-- Added the Bootstrap CDN -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="jumbotron">
+        Activity 4: Online MQTT Web Client
+    </div>
+    <div class="col-sm-4">
+        <h1>Connect to a Broker</h1>
+        <div class="form-group container">
+            <div class="row">
+                <label>Input a broker to connect</label>
+                <input id="broker-input" type="text" value="wss://test.mosquitto.org:8081/mqtt"><br>
+            </div>
+            <div class="row">
+                <button id="con-button" class="btn btn-primary" >Connect</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <h1>Publish a topic</h1>
+        <div class="form-group container">
+            <div class="row">
+                <label>Input a topic to publish</label>
+                <input id="topic" type="text" placeholder="Enter a topic"><br>
+                <label>Input the payload for the topic</label>
+                <input id="pub-payload" type="text" placeholder="Enter a payload for the topic"><br>
+            </div>
+            <div class="row">
+                <button id="pub-button" class="btn btn-primary">Publish</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <h1>Subscribe to a topic</h1>
+        <div class="form-group container">
+            <div class="row">
+                <label>Input a topic to subscribe</label>
+                <input id="topicToSub" type="text" placeholder="Enter a topic"><br>
+            </div>
+            <div class="row">
+                <button id="subscribeButton" class="btn btn-primary">Subscribe</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="col-sm-12">
+        <hr id="black">
+    </div>
+    <br><br>
+    <div class="col-sm-4" id="response">
+        <h1>Incoming Messages</h1>
+        <div class="card">
+            <div id="topic1" class="col-sm-4"><h1>Topic</h1></div>
+            <div id="payload1" class="col-sm-4"><h1>Payload</h1></div>
+            <div id="messages1" class="col-sm-4"><h1>Time Stamp</h1> </div>
+
+        </div>
+    </div>
+    <div class="col-sm-4" id="response2">
+        <h1>Published Messages</h1>
+        <div class="card">
+            <div id="topic2" class="col-sm-4"><h1>Topic</h1></div>
+            <div id="payload2" class="col-sm-4"><h1>Payload</h1></div>
+            <div id="messages2" class="col-sm-4"><h1>Time Stamp</h1> </div>
+
+        </div>
+    </div>
+    <div class="col-sm-4" id="response3">
+        <h1>Subscribed Messages</h1>
+        <div class="card">
+            <div id="topic3" class="col-sm-4"><h1>Topic</h1></div>
+            <div id="messages3" class="col-sm-6"><h1>Time Stamp</h1></div>
+        </div>
+    </div>
+</body>
+<script src="./browserMqtt.js"></script>
+<script src="./index.js"></script>
+
+</html>

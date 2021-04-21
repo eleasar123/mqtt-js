@@ -1,0 +1,37 @@
+h1 {
+    border: 1px solid black;
+}
+
+.row {
+    padding: 5px;
+}
+
+div.form-group {
+    border: 1px solid black;
+    width: 100%;
+}
+div.row{
+    padding: 10px;
+}
+input[type=text]{
+    margin: 10px;
+}
+#response,#response2,#response3{
+    text-align: center;
+    font-size: 20px;
+}
+.jumbotron{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+#black{
+    border: solid 1px black;
+    margin-bottom: 0px;
+}
+h1{
+    font-size: 20px;
+}
+p{
+    font-size: 15px
+}
