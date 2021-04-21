@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQTT</title>
+
+    <!-- Added the Bootstrap CDN -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="col-sm-6">
+        <h1>Publish a topic</h1>
+        <div class="form-group container">
+            <div class="row">
+                <label>Input a topic to publish</label>
+                <input id="pub-input" type="text"><br>
+                <label>Input the payload for the topic</label>
+                <input id="pub-payload" type="text"><br>
+            </div>
+            <div class="row">
+                <button id="pub-button" class="btn btn-primary" >Publish</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <h1>Subscribe to a topic</h1>
+        <div class="form-group container">
+            <div class="row">
+                <label>Input a topic to subscribe</label>
+                <input id="topicToSub" type="text"><br>
+            </div>
+            <div class="row">
+                <button id="subscribeButton" class="btn btn-primary" >Subscribe</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br><br>
+    <div class="col-sm-8" id="response">
+        <h1>Incoming Messages</h1>
+        <div class="card">
+            <div id="topic" class="col-sm-4"></div>
+            <div id="messages" class="col-sm-4"></div>
+        </div>
+    </div>
+</body>
+<script src="./browserMqtt.js"></script>
+<script src="./index.js"></script>
+
+</html>
